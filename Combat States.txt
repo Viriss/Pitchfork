@@ -1,0 +1,27 @@
+
+
+Title Screen
+
+	Combat Start
+	
+		Top
+			a.	User Action
+				1.	Do Match
+					Back to Top
+				2.	Do Skill
+					Sekect Target
+					Back to Top
+			
+
+			b.	AI Action
+				1.	Do Match
+					Back to Top
+				2.	Do Skill
+					Sekect Target
+					Back to Top
+
+			
+			
+End Game
+
+	
