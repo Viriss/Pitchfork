@@ -16,6 +16,10 @@ public class oUnit
     public int CurAtt;
     public int CurDef;
     public int CurMagic;
+    public int StartingAtt;
+    public int StartingDef;
+    public int StartingHP;
+    public int StartingMagic;
     
     private int _curMana;
     public int CurMana { get { return _curMana; } }
@@ -155,6 +159,11 @@ public class oUnit
         CurDef = Def;
         CurHP = MaxHP;
         CurMagic = MaxMagic;
+
+        StartingAtt = Att;
+        StartingDef = Def;
+        StartingHP = MaxHP;
+        StartingMagic = MaxMagic;
     }
     public float PowerPerc()
     {

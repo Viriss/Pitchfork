@@ -80,6 +80,16 @@ public class UnitCard : MonoBehaviour {
             _defense.text = Defense.ToString();
             _health.text = Health.ToString();
 
+            if (_defense.text == "0")
+            {
+                _defense.text = "";
+            }
+
+            SetTextColor(_attack, Unit.CurAtt, Unit.StartingAtt);
+            SetTextColor(_defense, Unit.CurDef, Unit.StartingDef);
+            SetTextColor(_health, Unit.CurHP, Unit.StartingHP);
+
+
             ColorIdentity = Unit.ColorIdentity;
 
             UpdateColorIdentity("_MainTex", ColorIdentity);
@@ -108,6 +118,21 @@ public class UnitCard : MonoBehaviour {
         HighlightB.SetActive(Show);
     }
 
+    private void SetTextColor(TextMesh text, int CurValue, int StartValue)
+    {
+        if (CurValue < StartValue)
+        {
+            text.color = new Color32(255, 69, 0, 255);
+        }
+        else if (CurValue > StartValue)
+        {
+            text.color = new Color32(0, 255, 0, 255);
+        }
+        else
+        {
+            text.color = Color.white;
+        }
+    }
     private void UpdateColorIdentity(string Texture, ColorIdentity colorID)
     {
         ColorIdentity nextColor;

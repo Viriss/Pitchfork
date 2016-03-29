@@ -73,6 +73,11 @@ public class oState_BeginCombat : oStateMachine
         GoodTeam();
         BadTeam();
 
+        foreach (oPlayer p in GlobalCombat.GM.Players)
+        {
+            p.StartCombat();
+        }
+
         _gm.DisplayTeams();
     }
     private void GoodTeam()

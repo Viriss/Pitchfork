@@ -81,6 +81,13 @@ public class oPlayer
             }
         }
     }
+    public void StartCombat()
+    {
+        foreach(oUnit unit in Team)
+        {
+            unit.ResetValues();
+        }
+    }
     public oUnit GetFirstActiveUnit()
     {
         foreach(oUnit unit in Team)
